@@ -90,6 +90,23 @@
       });
     });
 
+    $$("[data-baidu-internal-link]").forEach((link) => {
+      const href = site.baiduInternalUrl || "#";
+      link.setAttribute("href", href);
+      if (site.baiduInternalUrl && site.baiduInternalUrl !== "#") {
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+        link.removeAttribute("aria-disabled");
+      } else {
+        link.removeAttribute("target");
+        link.removeAttribute("rel");
+        link.setAttribute("aria-disabled", "true");
+      }
+      link.addEventListener("click", (event) => {
+        if (!site.baiduInternalUrl || site.baiduInternalUrl === "#") event.preventDefault();
+      });
+    });
+
     const socials = $("[data-socials]");
     if (socials) {
       socials.innerHTML = (site.socials || [])
