@@ -5998,3 +5998,37 @@ a[aria-disabled="true"] {
   border-color: rgba(255, 255, 255, 0.12);
   color: rgba(240, 240, 236, 0.78);
 }
+
+/* V11.1 keep vertical structure, remove full-width horizontal dividers. */
+body::before,
+body::after {
+  display: none;
+}
+
+.intro-video-section {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.industry-timeline-head {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.industry-track,
+.industry-track-game,
+.industry-track-commerce,
+.industry-track-app,
+.industry-track-vibe {
+  border-bottom: 0;
+}
+
+.highlight-grid {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.horizontal-gallery-shell {
+  border-top: 0;
+  border-bottom: 0;
+}
