@@ -1354,7 +1354,7 @@ button.mini-action {
 }
 
 .contact-band {
-  border-top: 1px solid rgba(116, 238, 255, 0.14);
+  border-top: 0;
   background: rgba(3, 5, 7, 0.46);
 }
 

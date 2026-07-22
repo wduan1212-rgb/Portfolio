@@ -218,20 +218,41 @@
   function renderHighlights() {
     const root = $("[data-highlights]");
     if (!root) return;
-    const keys = ["游戏", "电商", "APP", "Vibe Coding"];
-    root.innerHTML = categories
-      .filter((category) => keys.includes(category.key))
-      .map((category) => {
-        const firstWork = works.find((work) => work.category === category.key);
+    const directions = [
+      {
+        categoryKey: "Vibe Coding",
+        title: "AI产品自动化",
+        summary: "AI 辅助编程、创作工具、工作流站点与内部生产平台。"
+      },
+      {
+        categoryKey: "APP",
+        title: "AI视频批量产出",
+        summary: "从需求解析、生成编排到多规格批量交付的内容生产流程。"
+      },
+      {
+        categoryKey: "电商",
+        title: "品牌市场策略",
+        summary: "围绕品牌定位、市场洞察与传播目标组织创意方案。"
+      },
+      {
+        categoryKey: "游戏",
+        title: "信息流与精品视频制作",
+        summary: "覆盖高频信息流投放、商业短片与精品 AI 视频制作。"
+      }
+    ];
+    root.innerHTML = directions
+      .map((direction) => {
+        const category = categories.find((item) => item.key === direction.categoryKey);
+        const firstWork = works.find((work) => work.category === direction.categoryKey);
         return `
-          <a class="metric-card reveal" href="works.html?category=${encodeURIComponent(category.key)}" data-accent="${escapeHTML(firstWork?.accent || "cyan")}">
+          <a class="metric-card reveal" href="works.html?category=${encodeURIComponent(direction.categoryKey)}" data-accent="${escapeHTML(firstWork?.accent || "cyan")}">
             <div>
               <div class="metric-top">
-                <span class="metric-icon" data-icon="${escapeHTML(category.icon)}" aria-hidden="true"></span>
-                <span class="count">${String(countCategory(category.key)).padStart(2, "0")} Series</span>
+                <span class="metric-icon" data-icon="${escapeHTML(category?.icon || "all")}" aria-hidden="true"></span>
+                <span class="count">${String(countCategory(direction.categoryKey)).padStart(2, "0")} Series</span>
               </div>
-              <h3>${escapeHTML(category.cn || category.key)}</h3>
-              <p>${escapeHTML(category.summary)}</p>
+              <h3>${escapeHTML(direction.title)}</h3>
+              <p>${escapeHTML(direction.summary)}</p>
             </div>
             <span class="text-link">View Works</span>
           </a>
