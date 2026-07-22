@@ -2755,7 +2755,8 @@ a[aria-disabled="true"] {
   overflow: hidden;
 }
 
-.intro-preview-video {
+.intro-preview-video,
+.intro-preview-image {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -2764,6 +2765,10 @@ a[aria-disabled="true"] {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+}
+
+.baidu-demo-card .intro-preview-image {
+  object-position: center;
 }
 
 .intro-video-card::before {

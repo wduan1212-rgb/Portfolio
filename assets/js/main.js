@@ -411,13 +411,13 @@
 
     const groups = [
       {
-        id: "game",
-        className: "industry-track-game",
-        title: "游戏",
-        eyebrow: "Game Direction",
-        description: "游戏视觉、角色 Campaign、龙之契系列与互动展示入口。",
-        duration: 54,
-        items: gameItems
+        id: "app",
+        className: "industry-track-app",
+        title: "APP",
+        eyebrow: "APP Promo",
+        description: "支付、旅行、贷款、出行和移动应用相关传播项目。",
+        duration: 62,
+        items: appItems
       },
       {
         id: "ecommerce",
@@ -429,15 +429,6 @@
         items: commerceItems
       },
       {
-        id: "app",
-        className: "industry-track-app",
-        title: "APP",
-        eyebrow: "APP Promo",
-        description: "支付、旅行、贷款、出行和移动应用相关传播项目。",
-        duration: 62,
-        items: appItems
-      },
-      {
         id: "vibe",
         className: "industry-track-vibe",
         title: "Vibe Coding",
@@ -445,6 +436,15 @@
         description: "网站、工具、游戏 Demo 与教学型网页项目。",
         duration: 58,
         items: vibeCodingItems
+      },
+      {
+        id: "game",
+        className: "industry-track-game",
+        title: "游戏",
+        eyebrow: "Game Direction",
+        description: "游戏视觉、角色 Campaign、龙之契系列与互动展示入口。",
+        duration: 54,
+        items: gameItems
       }
     ];
 
@@ -455,7 +455,7 @@
       <div class="industry-timeline" aria-label="Industry project timelines">
         <div class="industry-timeline-head">
           <span>Industry Timelines</span>
-          <em>Games · E-commerce · APP · Vibe Coding</em>
+          <em>APP · E-commerce · Vibe Coding · Games</em>
           <strong>${totalCount} project series</strong>
         </div>
         <div class="industry-track-list">
