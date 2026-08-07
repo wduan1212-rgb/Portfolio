@@ -7,7 +7,7 @@ window.siteConfig = {
   location: "Shanghai, China / 中国·上海",
   wechat: "Jindouxiaozi",
   feishuUrl: "https://tcndqnj035ys.feishu.cn/docx/TIaadDGlfo3OVuxZvAxcnTnXn2g?from=from_copylink",
-  baiduInternalUrl: "https://jindouxiaozi.feishu.cn/docx/TLppdAjQmo33oaxvZJsc1IllnUh?from=from_copylink",
+  baiduInternalUrl: "https://jindouxiaozi.feishu.cn/docx/LkN3dp9XHo8XXhxn0k0cXXZUn2f?from=from_copylink",
   heroVideo: "assets/videos/portfolio-hero-loop.mp4",
   heroPoster: "assets/hero/portfolio-hero-poster.png",
   introVideo: "",
